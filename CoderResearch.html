@@ -8,41 +8,66 @@
 </head>
 
 <body>
-  <form>
-    <label>How would you rate these radio buttons?</label>
-    <input type="radio" name="value-1" value="1">1
-    <input type="radio" name="value-2" value="2">2
-    <input type="radio" name="value-3" value="3">3
-    <input type="radio" name="value-4" value="4">4
-    <input type="radio" name="value-5" value="5">5
+  <div id="page-container">
+    <h1>kat4 CodeResearch</h1>
+    <p>kat4 are back with another killer hit. We're looking to find out which type of input annoys users most.</p>
+    <form onsubmit="checkSubmit(); return false;" action="#">
+      <label>How would you rate these radio buttons?</label>
+      <input type="radio" name="radio" value="1">1
+      <input type="radio" name="radio" value="2">2
+      <input type="radio" name="radio" value="3">3
+      <input type="radio" name="radio" value="4">4
+      <input type="radio" name="radio" value="5">5
 
-    <label>How about this dropdowns?</label>
-    <select>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
+      <label>How about this dropdowns?</label>
+      <select id="thedropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
 
-    <label>Are these checkboxes annoying?</label>
-    <BR>
-    <INPUT TYPE=CHECKBOX NAME="1">1
-    <INPUT TYPE=CHECKBOX NAME="2">2
-    <INPUT TYPE=CHECKBOX NAME="3">3
-    <INPUT TYPE=CHECKBOX NAME="4">4
-    <INPUT TYPE=CHECKBOX NAME="5">5
+      <label>Are these checkboxes annoying?</label>
+      <INPUT TYPE="checkbox" NAME="checkbox">1
+      <INPUT TYPE="checkbox" NAME="checkbox">2
+      <INPUT TYPE="checkbox" NAME="checkbox">3
+      <INPUT TYPE="checkbox" NAME="checkbox">4
+      <INPUT TYPE="checkbox" NAME="checkbox">5
 
-    <label for="range">Slide to rate the range slider as an input. Left being terrible, right being terribly awesome.</label>
-    <input type="range" min="1" max="5" value="3" oninput="outputUpdate(value)">
-    <output for="range" id="scale">3</output>
+      <label for="range">Slide to rate the range slider as an input. Left being terrible, right being terribly awesome.</label>
+      <input type="range" min="1" max="5" value="3" oninput="outputUpdate(value)">
+      <output for="range" id="scale">3</output>
 
+      <input type="submit">
 
-  </form>
+    </form>
+  </div>
   <script language="javascript" type="text/javascript" src="main.js"></script>
   <script>
     function outputUpdate(val) {
       document.querySelector('#scale').value = val;
+    }
+
+    function checkSubmit() {
+      var checkBoxInput = "Your checkpoint value is ";
+      var checks = document.getElementsByName("checkbox");
+      var a = document.getElementById("thedropdown");
+      var k = 0;
+      for (var i = 0; i < checks.length; i++) {
+        if (checks[i].checked) {
+          checkBoxInput += i + 1;
+          if (k == 0) {} else {
+            checkBoxInput += " and "
+          }
+          k = k + 1;
+          break;
+        }
+
+      }
+      var a = document.getElementById("thedropdown");
+      console.log("You rate Dropdowns as", a.options[a.selectedIndex].value, "out of 5.");
+      console.log(checkBoxInput);
     }
   </script>
 
