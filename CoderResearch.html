@@ -7,6 +7,40 @@
 </head>
 <body>
 
+  <form id="radio-btn-form" method="post" action="/user" class="form">
+
+    <label>How would you rate these radio buttons?</label>
+      <input class="radio" id="radio1" type="radio" name="value-1" value="1">1
+      <input class="radio" id="radio2" type="radio" name="value-2" value="2">2
+      <input class="radio" id="radio3" type="radio" name="value-3" value="3">3
+      <input class="radio" id="radio4" type="radio" name="value-4" value="4">4
+      <input class="radio" id="radio5" type="radio" name="value-5" value="5">5
+
+    <label>How about this dropdowns?</label>
+      <select>
+        <option class="dropdown" id="dropdown1" value="1">1</option>
+        <option class="dropdown" id="dropdown2" value="2">2</option>
+        <option class="dropdown" id="dropdown3" value="3">3</option>
+        <option class="dropdown" id="dropdown4" value="4">4</option>
+        <option class="dropdown" id="dropdown5" value="5">5</option>
+      </select>
+
+    <label>Are these checkboxes annoying?</label>
+      <br>
+      <input class="checkbox" id="checkbox1" type=checkbox name="1">1
+      <input class="checkbox" id="checkbox2" type=checkbox name="2">2
+      <input class="checkbox" id="checkbox3" type=checkbox name="3">3
+      <input class="checkbox" id="checkbox4" type=checkbox name="4">4
+      <input class="checkbox" id="checkbox5" type=checkbox name="5">5
+
+    <label for="range">Slide to rate the range slider as an input. Left being terrible, right being terribly awesome.</label>
+    <input class="slider" id=slider type="range" min="1" max="5" value="3" oninput="outputUpdate(value)">
+    <output for="range" id="scale">3</output>
+
+
+
+  </form>
+
 <script language="javascript" type="text/javascript" src="main.js"></script>
 </body>
 </html>
