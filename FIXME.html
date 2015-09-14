@@ -46,12 +46,12 @@
   function getRadioValue(groupName, groupVal) {
             var valRet = 0;
             var radios = document.getElementsByName(groupName);
-            for (var i = 0; i < radios.length; i++) { 
+            for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
-            groupVal = i; 
+            groupVal = i;
             break;
         }
-      
+
     }
     return groupVal;
   };
@@ -59,8 +59,8 @@
   enjInput = (getRadioValue("t-e", enjInput)+1);
 
   console.log("{Type: "+typeInput.value+"}");
-  console.log("{Intensity: "+intInput+"}"); 
-  console.log("{Enjoyment: "+enjInput+"}"); 
+  console.log("{Intensity: "+intInput+"}");
+  console.log("{Enjoyment: "+enjInput+"}");
   console.log("{Length: "+lenInput.value+"}"); console.log("{Notes: "+noteInput.value+"}"); console.log("{Injuries: "+injInput.value+"}"); console.log("{Goals: "+goalInput.value+"}")});</script>
 </body>
 </html>
