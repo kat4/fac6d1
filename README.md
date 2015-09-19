@@ -13,3 +13,6 @@
   
   
 ![Honest Abe](http://i.imgur.com/KbV6JeX.png?utm_source=Mr%20Hyde&utm_medium=email&utm_campaign=6150746_MH%20140915&dm_i=25MP,3NTY2,GCG4Y8,D6C4H,1)
+
+
+#go through each week, the learning objectives, and key points
